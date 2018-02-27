@@ -9,3 +9,18 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
+
+.App-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.App-button {
+  font-weight: bold;
+  display: center;
+  width: 10%;
+  margin: 6%;
+  border-radius: 10px;
+  height: 4em;
+  border: 2px solid black;
+}

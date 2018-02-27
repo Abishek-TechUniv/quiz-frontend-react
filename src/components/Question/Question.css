@@ -1,7 +1,7 @@
 .Question {
   border: 2px solid black;
   height: 10%;
-  width: 80%;
+  width: 100%;
   margin: 2%;
 }
 
@@ -35,6 +35,5 @@
 
 .Question-radio>input:checked {
   opacity: 100;
-  background: violet;
   size: 2em;
 }

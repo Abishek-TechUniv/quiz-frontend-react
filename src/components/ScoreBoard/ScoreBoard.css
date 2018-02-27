@@ -1,0 +1,63 @@
+.ScoreBoard {
+  flex-grow: 1;
+  margin: 5vh;
+  margin-top: 15vh;
+}
+
+.ScoreBoard-text {
+  font-size: 1.2em;
+  color: orange;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ScoreBoard-myScore {
+  font-size: 2.5em;
+  font-weight: lighter;
+}
+
+.ScoreBoard-total {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.ScoreBoard-leaderboard {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ScoreBoard-leader-text {
+  font-weight: bold;
+  align-self: center;
+}
+
+.ScoreBoard-allScores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Score-display {
+  justify-self: center;
+  display: flex;
+  border: 2px solid black;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgb(85, 201, 255);
+  height: 1em;
+  margin: 2%;
+  padding: 2%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.Score-index {
+  color: black;
+}
+
+.Score-red {
+  background: rgb(255, 85, 85);;
+
+}

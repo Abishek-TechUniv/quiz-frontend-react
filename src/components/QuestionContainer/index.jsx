@@ -12,12 +12,14 @@ const QuestionContainer = (props) => {
       userName={props.userName}
       details={question}
       key={question.questionId}
+      selected={props.responses.find(x => x.questionId === question.questionId)}
     />));
   return <div className="QuestionContainer">{questions}</div>;
 };
 
 QuestionContainer.propTypes = {
   userName: PropTypes.string.isRequired,
+  responses: PropTypes.arrayOf(PropTypes.object).isRequired,
   questions: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 export default QuestionContainer;
