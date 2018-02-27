@@ -1,13 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import axios from 'axios';
 import './Question.css';
 
-const Question = ({ details, id }) => {
+const Question = ({ details, id, userName }) => {
+  const click = (radio) => {
+    axios.post('/response', { userName, questionId: details.questionId, response: radio.currentTarget.value });
+  };
+
   const options = () => details.options.map(element =>
     (
-      <div className="Question-options">
+      <div className="Question-options" key={element}>
         <span className="Question-radio">
-          <input type="radio" name={details.questionId} value={element} />
+          <input
+            type="radio"
+            name={details.questionId}
+            onChange={click}
+            value={element}
+          />
         </span>
         {element}
         <br />
@@ -22,10 +32,11 @@ const Question = ({ details, id }) => {
 };
 
 Question.propTypes = {
+  userName: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   details: PropTypes.shape({
     questionId: PropTypes.number,
-    questiom: PropTypes.string,
+    question: PropTypes.string,
     options: PropTypes.array,
   }).isRequired,
 };

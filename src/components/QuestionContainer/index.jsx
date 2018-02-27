@@ -9,6 +9,7 @@ const QuestionContainer = (props) => {
   const questions = props.questions.map((question, idx) =>
     (<Question
       id={idx}
+      userName={props.userName}
       details={question}
       key={question.questionId}
     />));
@@ -16,6 +17,7 @@ const QuestionContainer = (props) => {
 };
 
 QuestionContainer.propTypes = {
+  userName: PropTypes.string.isRequired,
   questions: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 export default QuestionContainer;

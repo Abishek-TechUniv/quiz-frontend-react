@@ -56,7 +56,10 @@ class App extends React.Component {
       return (
         <div className="App-container">
           <TopBar welcome={`Hello ${this.state.userName}`} />
-          <QuestionContainer questions={this.state.questions} />
+          <QuestionContainer
+            questions={this.state.questions}
+            userName={this.state.userName}
+          />
           <button>Calculate</button>
         </div>);
     } return (
