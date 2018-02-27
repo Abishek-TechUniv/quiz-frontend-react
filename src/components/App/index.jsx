@@ -18,7 +18,7 @@ class App extends React.Component {
       scores: [],
       questions: [],
       selected: [],
-      numSelected: 0,
+      canComplete: false,
     };
   }
 
@@ -44,6 +44,12 @@ class App extends React.Component {
         page: 'questions',
         selected: result.data,
       }));
+  }
+
+  check = () => {
+    axios.post('/users/response', { userName: this.state.userName })
+      .then(result => ((result.data.length === this.state.questions.length) ?
+        this.setState({ canComplete: true }) : null));
   }
 
   update = (e) => {
@@ -79,6 +85,7 @@ class App extends React.Component {
         <div className="App-container">
           <TopBar welcome={`Hello ${this.state.userName}`} />
           <QuestionContainer
+            check={this.check}
             questions={this.state.questions}
             userName={this.state.userName}
             responses={this.state.selected}
@@ -87,7 +94,7 @@ class App extends React.Component {
             <button
               className="App-button"
               onClick={this.calculate}
-              // disabled={this.state.numSelected !== this.state.questions.length}
+              disabled={!this.state.canComplete}
             >Calculate
             </button>
           </div>
@@ -105,7 +112,7 @@ class App extends React.Component {
           <button
             className="App-button"
             onClick={() =>
-                this.setState({ page: 'login' })}
+                this.setState({ page: 'login', canComplete: false })}
           >Play Again
           </button>
         </div>

@@ -11,8 +11,12 @@ class Question extends React.Component {
   //   };
   // }
 
+  componentDidMount = () => {
+    this.props.check();
+  }
+
   click = (radio) => {
-    axios.post('/response', { userName: this.props.userName, questionId: this.props.details.questionId, response: radio.currentTarget.value });
+    axios.post('/response', { userName: this.props.userName, questionId: this.props.details.questionId, response: radio.currentTarget.value }).then(() => this.props.check());
   };
 
   options = () => this.props.details.options.map(element =>
@@ -45,8 +49,9 @@ class Question extends React.Component {
 
 
 Question.propTypes = {
+  check: PropTypes.func.isRequired,
   selected: PropTypes.shape({
-    questionId: PropTypes.string,
+    questionId: PropTypes.number,
     response: PropTypes.string,
   }),
   userName: PropTypes.string.isRequired,
