@@ -1,0 +1,22 @@
+.TopBar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: fixed;
+  height: 10%;
+  background: black;
+  width: 100%;
+}
+
+.TopBar-title {
+  font-size: 2em;
+  padding: 2%;
+  color: white;
+  font-weight: bolder;
+}
+
+.TopBar-welcome {
+  font-size: 2em;
+  padding: 2%;
+  color: white;
+}

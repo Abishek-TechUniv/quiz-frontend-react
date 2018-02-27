@@ -1,0 +1,70 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(19, 8, 82);
+  flex-grow: 1;
+}
+
+.Login-card {
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+  width: 70vw;
+  background: white;
+}
+
+.Login-text {
+  width: 85%;
+  padding-top: 20%;
+  background: rgb(82, 144, 214);
+  color: black;
+  font-size: 2em;
+  text-align: center;
+}
+
+.Login-white {
+  color: white;
+}
+
+.Login-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Login-title {
+  margin-left: 10%;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.Login-user {
+  font-weight: bold;
+  padding: 10%;
+  align-self: center;
+  width: 80%;
+}
+
+.Login-submit {
+  align-self: center;
+  width: 60%;
+}
+
+.Login-button {
+  font-weight: bold;
+  width: 80%;
+  margin: 10%;
+  border-radius: 8px;
+  height: 3em;
+  border: 2px solid black;
+}
+
+.Login-input {
+  margin-top: 5%;
+  width: 100%;
+  height: 3em;
+  border: 2px solid black;
+}

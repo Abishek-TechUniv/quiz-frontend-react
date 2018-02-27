@@ -1,0 +1,11 @@
+body {
+  margin: 0px;
+}
+
+.App-container {
+  min-height: 100vh;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
