@@ -18,7 +18,11 @@ const Login = props => (
         <div className="Login-user">
         Username
           <br />
-          <input className="Login-input" type="text" />
+          <input
+            className="Login-input"
+            onChange={e => props.update(e)}
+            type="text"
+          />
         </div>
         <div className="Login-submit">
           <button className="Login-button" onClick={() => props.click()}>Login</button>
@@ -31,6 +35,7 @@ const Login = props => (
 Login.propTypes = {
   name: PropTypes.string,
   click: PropTypes.func.isRequired,
+  update: PropTypes.func.isRequired,
 };
 
 Login.defaultProps = {

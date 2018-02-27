@@ -16,7 +16,8 @@
 }
 
 .TopBar-welcome {
-  font-size: 2em;
-  padding: 2%;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 3%;
   color: white;
 }

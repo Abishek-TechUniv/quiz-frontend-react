@@ -1,0 +1,40 @@
+.Question {
+  border: 2px solid black;
+  height: 10%;
+  width: 80%;
+  margin: 2%;
+}
+
+.Question-text {
+  padding: 10px; 
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: rgb(85, 201, 255);
+}
+
+.Question-options {
+  margin: 15px;
+  font-weight: bold;
+}
+
+.Question-id {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.Question-radio {
+  border-radius: 2em;
+  border: 2px solid black;
+  margin: 10px;
+  margin-right: 20px;
+}
+
+.Question-radio>input {
+  opacity: 0;
+}
+
+.Question-radio>input:checked {
+  opacity: 100;
+  background: violet;
+  size: 2em;
+}
