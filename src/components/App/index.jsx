@@ -26,7 +26,7 @@ class App extends React.Component {
     axios.get('/questions')
       .then((questions) => {
         if (questions.data.length === 0) {
-          axios.put('/questions')
+          axios.post('/questions')
             .then(() => {
               axios.get('/questions')
                 .then(qArr => this.setState({
