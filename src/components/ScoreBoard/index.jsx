@@ -5,7 +5,7 @@ import './ScoreBoard.css';
 const ScoreBoard = (props) => {
   const scores = props.scores.slice(0, 5);
   const scoresDisplay = scores.map((scoreObj, idx) => (
-    <div className={props.userName === scoreObj.userName ? 'Score-display Score-red' : 'Score-display'}>
+    <div className={props.userName === scoreObj.userName ? 'Score-display Score-red' : 'Score-display'} key={scoreObj.userName}>
       <div>
         <span className="Score-index">{idx + 1}. </span>
         {scoreObj.userName}

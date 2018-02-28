@@ -61,5 +61,11 @@
 
 .Score-red {
   background: rgb(255, 85, 85);;
+}
 
+@media (max-width: 700px) {
+  .Score-display {
+    font-size: 0.8em;
+    height: 1em;
+  }
 }
