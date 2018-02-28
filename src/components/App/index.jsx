@@ -38,12 +38,16 @@ class App extends React.Component {
   }
 
   login = () => {
-    axios.post('/users', { userName: this.state.userName });
-    axios.post('/users/response', { userName: this.state.userName })
-      .then(result => this.setState({
-        page: 'questions',
-        selected: result.data,
-      }));
+    if (this.state.userName !== '') {
+      axios.post('/users', { userName: this.state.userName });
+      axios.post('/users/response', { userName: this.state.userName })
+        .then(result => this.setState({
+          page: 'questions',
+          selected: result.data,
+        }));
+    } else {
+      this.setState({ page: 'login' });
+    }
   }
 
   check = () => {

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(19, 8, 82);
+  background: rgb(22, 33, 78);
   flex-grow: 1;
 }
 
@@ -16,10 +16,12 @@
 
 .Login-text {
   width: 85%;
-  padding-top: 20%;
-  background: rgb(82, 144, 214);
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  background: rgb(67,200,245);
   color: black;
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -38,7 +40,6 @@
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 10%;
-  margin-bottom: 10%;
 }
 
 .Login-user {

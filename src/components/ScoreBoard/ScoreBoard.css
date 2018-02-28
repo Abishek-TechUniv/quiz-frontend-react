@@ -1,5 +1,4 @@
 .ScoreBoard {
-  flex-grow: 1;
   margin: 5vh;
   margin-top: 15vh;
 }
@@ -23,12 +22,14 @@
 
 .ScoreBoard-leaderboard {
   margin: 5%;
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
 }
 
 .ScoreBoard-leader-text {
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 2em;
   align-self: center;
 }
 
@@ -44,16 +45,17 @@
   border: 2px solid black;
   flex-direction: row;
   justify-content: space-between;
-  background: rgb(85, 201, 255);
-  height: 1em;
-  margin: 2%;
-  padding: 2%;
+  background: rgb(67,200,245);
+  height: 0.5em;
+  margin: 1.5%;
+  padding: 2.2%;
   color: white;
   font-weight: bold;
   font-size: 1.2em;
 }
 
 .Score-index {
+  font-size: 1.2em;
   color: black;
 }
 
