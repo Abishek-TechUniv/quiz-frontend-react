@@ -34,5 +34,31 @@
 
 .Question-radio>input:checked {
   opacity: 100;
-  size: 2em;
+}
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -3px;
+  left: -3px;
+  position: relative;
+  background-color:black;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
